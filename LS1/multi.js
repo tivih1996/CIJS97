@@ -73,30 +73,29 @@ const PT8 = () => {
         if(employees[i].workingDays - employees[i].lateDays > employees[i+1].workingDays - employees[i+1].lateDays){
             Max ={...employees[i]}
         }else {
-            Max = {...employees[i+1]}
-        }
+            Max = {...employees[i+1]} 
     }
     
     return console.log(Max)
       
 }
 
-const PT9 = () => {
-    const employees = [
-        { id: 1, name: "John", salary: 2000 },
-        { id: 2, name: "Jane", salary: 2500 },
-        { id: 3, name: "Mark", salary: 3000 },
-        { id: 4, name: "John", salary: 2200 },
-    ];
+// const PT9 = () => {
+//     const employees = [
+//         { id: 1, name: "John", salary: 2000 },
+//         { id: 2, name: "Jane", salary: 2500 },
+//         { id: 3, name: "Mark", salary: 3000 },
+//         { id: 4, name: "John", salary: 2200 },
+//     ];
     
-    var OP ={}
+//     var OP ={}
     
 
    
     
-    return console.log(Max)
+//     return console.log(Max)
       
-}
+// }
 
 function toggleDropdown() {
     var dropdownForm = document.getElementById("dropdownForm");
