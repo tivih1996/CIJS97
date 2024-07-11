@@ -37,18 +37,20 @@
   }
 }
 .App-container {
+  max-width: 1200px ;
+  max-height: 100%;
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr) ) ;
   place-items: center;
   justify-content: center;
   align-items: center;
-  grid-template-columns:220px 220px 220px 220px;
-  grid-template-rows:260px 260px 260px;
+  
 }
 .App-item {
-  width: 200px;
-  height: 175px;
-  background-color: rgba(128, 128, 128, 0.274);
+  width: 100%;
+  height: 100%;
+ 
   padding: 5px 5px;
   border-radius: 5px;
 }
@@ -112,4 +114,8 @@
   border-radius: 100px ;
   padding: 0px 20px;
   margin: 2px;
+}
+.background-color{
+  background-color: rgba(128, 128, 128, 0.274);
+  border-radius: 10px ;
 }
