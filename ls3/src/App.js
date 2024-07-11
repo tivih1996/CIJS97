@@ -1,4 +1,5 @@
 
+
 import './App.css';
 import img001 from "./images/001.png"
 import img002 from "./images/002.png"
@@ -14,107 +15,35 @@ import img011 from "./images/011.png"
 import img012 from "./images/012.png"
 
 function App() {
-  return (
-    <>
-        <div className = "App-container">
-          <div className="App-item">
-            <img className="App-img" src={img001}/>
-            <section>#001</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-grass" >Grass</span>
-            <span className="App-poison">Poison</span>
-         </div>
-           
-           
-          <div className="App-item">
-            <img className="App-img" src={img002}/>
-            <section>#002</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-grass" >Grass</span>
-            <span className="App-poison">Poison</span>
-           </div>
-
-           <div className="App-item">
-            <img className="App-img" src={img003}/>
-            <section>#003</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-grass" >Grass</span>
-            <span className="App-poison">Poison</span>
-           </div>
-
-          <div className="App-item">
-            <img className="App-img" src={img004}/>
-            <section>#004</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-fire" >Fire</span>
-          
-          </div>
-
-          <div className="App-item">
-            <img className="App-img" src={img005}/>
-            <section>#005</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-fire" >Fire</span>
-           </div>
-          
-           <div className="App-item">
-            <img className="App-img" src={img006}/>
-            <section>#006</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-fire" >Fire</span>
-            <span className="App-flying">Flying</span>
-           </div>
-          
-          <div className="App-item">
-            <img className="App-img" src={img007}/>
-            <section>#007</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-water" >Water</span>
-            
-          </div>
-          
-          <div className="App-item">
-            <img className="App-img" src={img008}/>
-            <section>#008</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-water" >Water</span>
-           </div>
-        
-           <div className="App-item">
-            <img className="App-img" src={img009}/>
-            <section>#009</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-water" >Water</span>
-           </div>
-           <div className="App-item">
-            <img className="App-img" src={img010}/>
-            <section>#010</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-bug" >Bug</span>
-           </div>
-
-           <div className="App-item">
-            <img className="App-img" src={img011}/>
-            <section>#011</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-bug" >Bug</span>
-           </div>
-          
-           <div className="App-item">
-            <img className="App-img" src={img012}/>
-            <section>#012</section>
-            <section className='App-name'>Bulbasaur</section>
-            <span className="App-bug" >Bug</span>
-            <span className="App-flying">Flying</span>
-           </div>
-
-
-        </div>
-        
+    const card =[
+      {name: 'Bulbasaur',number: '#0001',img: img001 , attribute1: 'Grass',attribute2: 'Poison' },
+      {name: 'Ivysaur',number: '#0002',img: img002 , attribute1: 'Grass',attribute2: 'Poison' },
+      {name: 'Venusaur',number: '#0003',img: img003 , attribute1: 'Grass',attribute2: 'Poison' },
+      {name: 'Charmander',number: '#0004',img: img004 , attribute1: 'Fire',attribute2: '' },
+      {name: 'Charmeleon',number: '#0005',img: img005 , attribute1: 'Fire',attribute2: ''  },
+      {name: 'Charizard',number: '#0006',img: img006 , attribute1: 'Fire',attribute2: 'Flying'  },
+      {name: 'Squirtile',number: '#0007',img: img007 , attribute1: 'Water',attribute2: ''  },
+      {name: 'Wartortle',number: '#0008',img: img008 , attribute1: 'Water',attribute2: ''  },
+      {name: 'Blastoise',number: '#0009',img: img009 , attribute1: 'Water',attribute2: ''  },
+      {name: 'Caterpie',number: '#0010',img: img010 , attribute1: 'Bug',attribute2: '' },
+      {name: 'Metapod',number: '#0011',img: img011 , attribute1: 'Bug',attribute2: ''},
+      {name: 'Butterfree',number: '#0012',img: img012 , attribute1: 'Bug',attribute2: 'Flying' }
+]
     
-    </>
-
-  );
+return (
+  <div className="App-container">
+            {card.map((card, index) => (
+                <div key={index} className="App-item">
+                    <img className="App-img" src={card.img} alt={card.name} />
+                    <section>{card.number}</section>
+                    <section className='App-name'>{card.name}</section>
+                    <span className={`App-${card.attribute1}`}>{card.attribute1}</span>
+                    <span className={`App-${card.attribute2}`}>{card.attribute2}</span>
+                </div>
+            ))}
+        </div>
+);
 }
+  
 // class = className, trong style={là 1 object}
 export default App;
