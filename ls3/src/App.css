@@ -38,6 +38,7 @@
 }
 .App-container {
   display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr) ) ;
   place-items: center;
   justify-content: center;
   align-items: center;
@@ -48,11 +49,13 @@
   width: 200px;
   height: 175px;
   background-color: rgba(128, 128, 128, 0.274);
-  padding: 2px 2px;
+  padding: 5px 5px;
+  border-radius: 5px;
 }
 .App-img {
   width: 100%; 
   height: 100%;
+  object-fit: fill;
 }
 .App-Grass{
   font-size: 10px;
@@ -63,7 +66,8 @@
   margin: 2px;
 }
 .App-Poison{
-  font-size: 10px;
+  color: white;
+  font-size: 10px ;
   font-family: Verdana;
   background-color: rgba(243, 107, 243, 0.815);
   border-radius: 100px ;
@@ -75,6 +79,7 @@
   font-family: Verdana;
 }
 .App-Fire{
+  color: white;
   font-size: 10px;
   font-family: Verdana;
   background-color: orange;
@@ -83,6 +88,7 @@
   margin: 2px;
 }
 .App-Bug{
+  color: white;
   font-size: 10px;
   font-family: Verdana;
   background-color: rgb(91, 146, 8);
@@ -91,6 +97,7 @@
   margin: 2px;
 }
 .App-Water{
+  color: white;
   font-size: 10px;
   font-family: Verdana;
   background-color: rgba(0, 195, 255, 0.473);
