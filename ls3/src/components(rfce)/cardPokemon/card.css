@@ -1,0 +1,83 @@
+.App-container {
+    max-width: 1200px ;
+    max-height: 100%;
+    margin: auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr) ) ;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .App-item {
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+  
+  }
+  .App-img {
+    width: 100%; 
+    height: 100%;
+  }
+  .App-Grass{
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: greenyellow;
+    border-radius: 100px ;
+    padding: 0px 20px;
+    margin: 2px;
+  }
+  .App-Poison{
+    color: white;
+    font-size: 10px ;
+    font-family: Verdana;
+    background-color: rgba(243, 107, 243, 0.815);
+    border-radius: 100px ;
+    padding: 0px 20px;
+    margin: 2px;
+  }
+  .App-name{
+    font-size: 20px;
+    font-family: Verdana;
+  }
+  .App-Fire{
+    color: white;
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: orange;
+    border-radius: 100px ;
+    padding: 0px 20px;
+    margin: 2px;
+  }
+  .App-Bug{
+    color: white;
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: rgb(91, 146, 8);
+    border-radius: 100px ;
+    padding: 0px 20px;
+    margin: 2px;
+  }
+  .App-Water{
+    color: white;
+    font-size: 10px;
+    font-family: Verdana;
+    background-color: rgba(0, 195, 255, 0.473);
+    border-radius: 100px ;
+    padding: 0px 20px;
+    margin: 2px;
+  }
+  .App-Flying{
+    font-size: 10px;
+    font-family: Verdana;
+    background-image: linear-gradient(to bottom, rgba(0, 162, 255, 0.411) 50%, rgba(128, 128, 128, 0.486) 50%);
+    border-radius: 100px ;
+    padding: 0px 20px;
+    margin: 2px;
+  }
+  .background-color{
+    background-color: rgba(128, 128, 128, 0.274);
+    border-radius: 10px ;
+    padding: 20px;
+  }
