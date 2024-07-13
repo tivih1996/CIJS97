@@ -1,14 +1,15 @@
 import React from 'react'
 import CardPerform from './components(rfce)/cardPokemon/CardPerform.jsx';
 
+function hello(name) {
+  return alert(name +' xin chào!')
+}
 
 function App() {
-  function Hello(prop) {
-    return alert(prop+' xin chào!')
-  }
+  
 
     return (
-      <CardPerform  />
+      <CardPerform hello={hello} />
     );
 }
 

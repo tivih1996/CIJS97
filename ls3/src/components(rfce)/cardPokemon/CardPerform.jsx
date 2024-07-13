@@ -2,19 +2,17 @@ import React from 'react'
 import { card } from './dataCard'
 import './card.css'
 
-function Hello(prop) {
-  return alert(prop+' xin chào!')
-}
 
-function CardPerform() {
+
+function CardPerform(prop) {
   
-
+  
   return (
     <div className="App-container">
              {card.map((items, index) => (
                 <div key={index} className="App-item">
                     <div className="background-color">
-                    <img className="App-img" src={items.img} alt={items.name} onClick={Hello(items.name)} />
+                    <img className="App-img" src={items.img} alt={items.name} onClick={() => prop.hello(items.name)}  />
                     </div>
                     <div>
                     <section>{items.number}</section>
