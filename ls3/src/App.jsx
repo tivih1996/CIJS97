@@ -2,6 +2,7 @@ import React from 'react'
 import CardPerform from './components(rfce)/cardPokemon/CardPerform.jsx';
 
 
+
 function App() {
 
   
