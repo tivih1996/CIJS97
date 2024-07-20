@@ -3,12 +3,13 @@ import CardPerform from './components(rfce)/cardPokemon/CardPerform.jsx';
 
 
 function App() {
-  function Hello(prop) {
-    return alert(prop+' xin chào!')
-  }
+
+  
 
     return (
+      
       <CardPerform  />
+    
     );
 }
 
