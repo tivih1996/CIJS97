@@ -38,7 +38,7 @@ function CardPerform() {
     
       </div>
     ))}
-        <ModalPokemon itemCard={currentItem} />
+        <ModalPokemon itemCard = {currentItem} />
     </div>
   )
 }
