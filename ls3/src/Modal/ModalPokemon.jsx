@@ -7,21 +7,21 @@ import { card } from '../components(rfce)/cardPokemon/dataCard';
 
 
 function ModalPokemon({ itemCard }) {
-    
+
     const closeModal = () => {
         const modalPokemon = document.getElementById('modalPokemon')
         modalPokemon.classList.remove('show')
         // xoá nội dung in put
         const inpText = document.getElementsByTagName('input')
         for (let i = 0; i < inpText.length; i++) {
-            inpText[i].value =''
+            inpText[i].value = ''
         }
-        
+
     }
 
 
 
-    
+
     var atbNoneNull = []
     if (itemCard !== null) {
         let atb = Object.keys(itemCard).filter(key => key.includes('attribute'))
@@ -37,16 +37,16 @@ function ModalPokemon({ itemCard }) {
         const namePokemon = e.target.attributes[0].value
         const attributePokemon = e.target.attributes[2].value
         const newAttributePokemon = e.target.value
-        for ( let item of card) {
-            if (item.name === namePokemon ){
+        for (let item of card) {
+            if (item.name === namePokemon) {
                 let arrKey = Object.keys(item)
                 let keyNeedUpdate = arrKey.find(key => item[key] === attributePokemon)
-                if(keyNeedUpdate !== undefined){
-                item[keyNeedUpdate] = newAttributePokemon
+                if (keyNeedUpdate !== undefined) {
+                    item[keyNeedUpdate] = newAttributePokemon
                 }
             }
         }
-        
+
     }
     return (
         <div id='modalPokemon' className='' >
@@ -62,11 +62,12 @@ function ModalPokemon({ itemCard }) {
                     <section className='inf-name'>{itemCard.number}</section>
                     <section className='inf-name'>{itemCard.name}</section>
                     {atbNoneNull.map((item) => (
-                        <input id={itemCard.name} className={`App-${item}`}  placeholder={item}
-                         onChange={(e)=>updateAttribute(e)}   />
+                        <input id={itemCard.name} className={`App-${item}`} placeholder={item}
+                            onChange={(e) => updateAttribute(e)} />
                     ))}
                 </div>
             </div>
+            
         </div>
     )
 }
