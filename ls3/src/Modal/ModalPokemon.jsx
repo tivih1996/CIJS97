@@ -46,7 +46,7 @@ function ModalPokemon({ itemCard }) {
                 }
             }
         }
-        console.log (card)
+        
     }
     return (
         <div id='modalPokemon' className='' >
