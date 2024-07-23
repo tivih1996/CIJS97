@@ -62,9 +62,9 @@
   color: white;
 }
 .button-update{
+  font-family:'Times New Roman', Times, serif;
   position: absolute;
-  top: 510px;
-  left: 340px;
+  left: 70%;
   margin: 0px 0px 0px 5px;
   padding: 5px;
   background-color: rgb(0, 255, 13);
