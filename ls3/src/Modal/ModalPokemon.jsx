@@ -10,6 +10,8 @@ function ModalPokemon({ ...its }) {
 
     let items = its.itemCard
     console.log(items)
+
+    // CLose Modal
     const closeModal = () => {
         const modalPokemon = document.getElementById('modalPokemon')
         modalPokemon.classList.remove('show')
@@ -31,7 +33,7 @@ function ModalPokemon({ ...its }) {
 
 
 
-    var atbNoneNull = []
+    let atbNoneNull = []
     if (itemCard !== null) {
         let atb = Object.keys(itemCard).filter(key => key.includes('attribute'))
         for (let idx of atb) {
@@ -56,25 +58,24 @@ function ModalPokemon({ ...its }) {
     }
 
 
-
+    //update thuộc tính mới
     const updateAtribute = (e) => {
         const idSpan = document.getElementsByClassName('button-update').id
         const newAttri = document.getElementsByClassName('button-update').content
         const namePokemon = document.getElementsByClassName('button-update').namePokemon
         const oldAttri = document.getElementsByClassName('button-update').attribute
         
-
+        //Update dữ liệu Array Card
         for (let item of card) {
             if (item.name === namePokemon) {
                 let arrKey = Object.keys(item)
                 let keyNeedUpdate = arrKey.find(key => item[key] === oldAttri)
                 if (keyNeedUpdate !== undefined) {
                     item[keyNeedUpdate] = newAttri
-
                 }
             }
         }
-        // alert nhập thuộc thính
+        // alert nếu nhập thuộc thính 
         let elementSpan = document.getElementById(idSpan)
         console.log(elementSpan)
         if (elementSpan === undefined || elementSpan === null || elementSpan === '') {
@@ -84,10 +85,10 @@ function ModalPokemon({ ...its }) {
         elementSpan.innerText = newAttri
         elementSpan.setAttribute('class', `App-${newAttri}`)
 
-        closeModal()
+        //Update Local Strorage
         const cardPresent = { ...card }
         localStorage.setItem('userCard', JSON.stringify(cardPresent))
-
+        closeModal()
     }
 
     return (

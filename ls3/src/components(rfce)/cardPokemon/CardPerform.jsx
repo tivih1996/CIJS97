@@ -36,6 +36,7 @@ function CardPerform() {
   if (localStorage.getItem('userCard') === null) {
     localStorage.setItem('userCard', JSON.stringify(cardPK))
   }
+  // Lấy dũ liệu lưu trên local
   const cardObject = JSON.parse(localStorage.getItem('userCard'))
   var cardArray = Object.values(cardObject).map(item => ({
     name: item.name,
@@ -44,8 +45,12 @@ function CardPerform() {
     attribute1: item.attribute1,
     attribute2: item.attribute2
   }))
+
+  //--------------------------
   const [card, setCard] = useState(cardArray)
   const [currentItem, setItem] = useState(null)
+
+
   // open Modal
   const openModal = (item) => {
     const modalPokemon = document.getElementById('modalPokemon')
@@ -59,7 +64,6 @@ function CardPerform() {
       attribute2: item.attribute2
     }))
     const newItem = cardArray.find(idx => idx.name === item.name)
-
     const cardArrayFilter = cardArray.filter(item => item.name.toLowerCase().includes(document.querySelector('input').value.toLowerCase()))
     setItem(newItem)
     setCard([...cardArrayFilter])
@@ -68,6 +72,7 @@ function CardPerform() {
 
 
 
+  //render lít tìm kiếm
   
   const searchPekemon = (e) => {
     const cardArrayFilter = cardArray.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
@@ -75,7 +80,7 @@ function CardPerform() {
   }
 
 
-
+ //render HTML
   return (
     <>
       <search>
