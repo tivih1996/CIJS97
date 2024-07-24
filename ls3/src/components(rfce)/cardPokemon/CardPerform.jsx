@@ -59,8 +59,11 @@ function CardPerform() {
       attribute2: item.attribute2
     }))
     const newItem = cardArray.find(idx => idx.name === item.name)
+
+    const cardArrayFilter = cardArray.filter(item => item.name.toLowerCase().includes(document.querySelector('input').value.toLowerCase()))
     setItem(newItem)
-    setCard(cardArray)
+    setCard([...cardArrayFilter])
+    
   }
 
 

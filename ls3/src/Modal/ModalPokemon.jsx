@@ -6,29 +6,29 @@ import { faCircleXmark, faHouseMedicalCircleExclamation } from '@fortawesome/fre
 import { card } from '../components(rfce)/cardPokemon/dataCard';
 
 
-function ModalPokemon({...its}) {
-    
+function ModalPokemon({ ...its }) {
+
     let items = its.itemCard
     console.log(items)
     const closeModal = () => {
         const modalPokemon = document.getElementById('modalPokemon')
         modalPokemon.classList.remove('show')
         // xoá nội dung in put
-        const inpText = document.getElementsByTagName('input')
+        const inpText = document.querySelectorAll('input[inputAtr="inputAttri"]')
         for (let i = 0; i < inpText.length; i++) {
             inpText[i].value = ''
         }
     }
 
-    
+
     let itemCard = {}
     let itemObject = {}
-    if(items !== null && items !== undefined ){
-    const cardObject = JSON.parse(localStorage.getItem('userCard'))
-    itemObject = Object.values(cardObject).find(itm => itm.name === items.name )
-    itemCard = {...itemObject}
+    if (items !== null && items !== undefined) {
+        const cardObject = JSON.parse(localStorage.getItem('userCard'))
+        itemObject = Object.values(cardObject).find(itm => itm.name === items.name)
+        itemCard = { ...itemObject }
     }
-    
+
 
 
     var atbNoneNull = []
@@ -42,10 +42,11 @@ function ModalPokemon({...its}) {
         }
 
     }
-    
+
     const getParam = (e) => {
+        console.log(e)
         const namePokemon = e.target.attributes[0].value
-        const attributePokemon = e.target.attributes[2].value
+        const attributePokemon = e.target.attributes[3].value
         const newAttributePokemon = e.target.value
 
         document.getElementsByClassName('button-update').id = `${namePokemon}${attributePokemon}`
@@ -61,6 +62,7 @@ function ModalPokemon({...its}) {
         const newAttri = document.getElementsByClassName('button-update').content
         const namePokemon = document.getElementsByClassName('button-update').namePokemon
         const oldAttri = document.getElementsByClassName('button-update').attribute
+        
 
         for (let item of card) {
             if (item.name === namePokemon) {
@@ -72,17 +74,22 @@ function ModalPokemon({...its}) {
                 }
             }
         }
+        // alert nhập thuộc thính
+        let elementSpan = document.getElementById(idSpan)
+        console.log(elementSpan)
+        if (elementSpan === undefined || elementSpan === null || elementSpan === '') {
+            return alert('Vui lòng nhập thuộc tính !!!')
+        }
 
-
-        document.getElementById(idSpan).innerText = newAttri
-        document.getElementById(idSpan).setAttribute('class', `App-${newAttri}`)
+        elementSpan.innerText = newAttri
+        elementSpan.setAttribute('class', `App-${newAttri}`)
 
         closeModal()
         const cardPresent = { ...card }
         localStorage.setItem('userCard', JSON.stringify(cardPresent))
 
     }
-   
+
     return (
         <div id='modalPokemon' className='' >
 
@@ -108,7 +115,7 @@ function ModalPokemon({...its}) {
                         {itemCard.name}
                     </section>
                     {atbNoneNull.map((item) => (
-                        <input id={itemCard.name} className={`App-${item}`} placeholder={item} onChange={getParam} />
+                        <input id={itemCard.name} inputAtr='inputAttri' className={`App-${item}`} placeholder={item} onChange={getParam} />
                     ))}
                 </div>
             </div>
