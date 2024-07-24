@@ -13,6 +13,7 @@
   .App-item {
     width: 100%;
     height: 100%;
+    max-width: 300px;
     padding: 10px 10px;
   
   }
