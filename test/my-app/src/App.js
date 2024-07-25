@@ -2,26 +2,19 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  // const [count, setCount] = useState(0);
-
-  useEffect(() => {
-		const handleScroll = () => {
-			const position = document.documentElement.scrollTop;
-			console.log("scrolling position: ", position);
-		}
-		document.addEventListener("scroll", handleScroll)
-		return () => {
-			document.removeEventListener("scroll", handleScroll)
-		}
+	const [count, setCount] = useState(0);
+	// Sử dụng useEffect
+	useEffect(() => {
+		document.title = "Tieu De " + count;
 	})
 
-return <div>Hellolll
-  ll'
-  ;\
-
-  đfsd
-  
-</div>
+	return (
+		<div>
+			<button onClick={() => setCount(count + 1)}>
+        			Click me
+      			</button>
+		</div>
+	); 
 }
 
 export default App;
