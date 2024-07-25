@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import './card.css'
 import ModalPokemon from '../../Modal/ModalPokemon'
+import { useEffect } from 'react'
+import { TailSpin } from 'react-loader-spinner';
+
 // import { card } from './dataCard'
 // import img001 from "../../images/001.png";
 // import img002 from "../../images/002.png";
@@ -49,12 +52,14 @@ function CardPerform() {
   //--------------------------
   const [card, setCard] = useState(cardArray)
   const [currentItem, setItem] = useState(null)
+  const [loading, setLoading] = useState(true)
 
+  
 
   // open Modal
   const openModal = (item) => {
     const modalPokemon = document.getElementById('modalPokemon')
-    modalPokemon.classList.replace('hidden','show')
+    modalPokemon.classList.replace('hidden', 'show')
     const cardObject = JSON.parse(localStorage.getItem('userCard'))
     const cardArray = Object.values(cardObject).map(item => ({
       name: item.name,
@@ -67,32 +72,47 @@ function CardPerform() {
     const cardArrayFilter = cardArray.filter(item => item.name.toLowerCase().includes(document.querySelector('input').value.toLowerCase()))
     setItem(newItem)
     setCard([...cardArrayFilter])
-    
+
   }
 
 
 
   //render lít tìm kiếm
-  
+
   const searchPekemon = (e) => {
     const cardArrayFilter = cardArray.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
     return setCard([...cardArrayFilter])
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  },[card]);
 
- //render HTML
+  //render HTML
   return (
     <>
       <search>
         <label>Tìm kiếm Pokémon</label>
         <input type='text' onChange={searchPekemon}></input>
       </search>
+
       <div className="App-container">
 
         {card.map((items) => (
           <div key={items.name} className="App-item">
             <div className="background-color">
-              <img className="App-img" src={items.img} alt={items.name} onClick={() => openModal(items)} />
+              {loading ? (
+                <TailSpin
+                  height="80"
+                  width="80"
+                  color="#00BFFF"
+                  ariaLabel="loading"
+                />
+              ) : (
+                <img className="App-img" src={items.img} alt={items.name} onClick={() => openModal(items)} />
+              )}
             </div>
             <div>
               <section>{items.number}</section>
@@ -105,6 +125,7 @@ function CardPerform() {
         ))}
         <ModalPokemon itemCard={currentItem} />
       </div>
+
     </>
   )
 }

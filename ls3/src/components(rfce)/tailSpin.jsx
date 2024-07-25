@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
+import './cardPokemon/card.css';
 import { TailSpin } from 'react-loader-spinner';
-function TailSpin() {
+
+function tailSpin() {
 	return (
-    <div className="loading-spinner">
+    <div >
       <TailSpin
         height="80"
         width="80"
@@ -14,4 +15,4 @@ function TailSpin() {
   );
 }
 
-export default TailSpin;
+export default tailSpin
