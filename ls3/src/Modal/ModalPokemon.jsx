@@ -14,12 +14,16 @@ function ModalPokemon({ ...its }) {
     // CLose Modal
     const closeModal = () => {
         const modalPokemon = document.getElementById('modalPokemon')
-        modalPokemon.classList.remove('show')
+        modalPokemon.classList.replace('show', 'close')
+
         // xoá nội dung in put
         const inpText = document.querySelectorAll('input[inputAtr="inputAttri"]')
         for (let i = 0; i < inpText.length; i++) {
             inpText[i].value = ''
         }
+        setTimeout(() => {
+            modalPokemon.classList.replace('close', 'hidden')
+        }, 800)
     }
 
 
@@ -64,7 +68,7 @@ function ModalPokemon({ ...its }) {
         const newAttri = document.getElementsByClassName('button-update').content
         const namePokemon = document.getElementsByClassName('button-update').namePokemon
         const oldAttri = document.getElementsByClassName('button-update').attribute
-        
+
         //Update dữ liệu Array Card
         for (let item of card) {
             if (item.name === namePokemon) {
@@ -92,7 +96,7 @@ function ModalPokemon({ ...its }) {
     }
 
     return (
-        <div id='modalPokemon' className='' >
+        <div id='modalPokemon' className='hidden' >
 
             <div className="background-modalPK">
                 <div className="background-img">

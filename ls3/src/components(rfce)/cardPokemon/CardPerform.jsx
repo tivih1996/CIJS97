@@ -54,7 +54,7 @@ function CardPerform() {
   // open Modal
   const openModal = (item) => {
     const modalPokemon = document.getElementById('modalPokemon')
-    modalPokemon.classList.add('show')
+    modalPokemon.classList.replace('hidden','show')
     const cardObject = JSON.parse(localStorage.getItem('userCard'))
     const cardArray = Object.values(cardObject).map(item => ({
       name: item.name,

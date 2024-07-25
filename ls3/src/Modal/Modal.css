@@ -1,4 +1,4 @@
-#modalPokemon {
+#modalPokemon.close {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,11 +8,43 @@
   max-width: 100%;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 1s ease;
+  
+}
+#modalPokemon.hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  
 }
 
 #modalPokemon.show {
-  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 100%;
   pointer-events: all;
+  opacity: 1;
+  transition: opacity 1s ease;  ;
+  
+}
+#modalPokemon.show .background-modalPK {
+  top: 50vh;
+  transition: top 0.8s ease;
+
+}
+#modalPokemon.close .background-modalPK {
+  top: 100vh;
+  transition: top 0.8s ease;
 }
 
 .background-modalPK {
@@ -20,9 +52,10 @@
   max-width: 500px;
   position: relative;
   left: 50vw;
-  top: 50vh ;
+  top: -100% ;
   transform: translateX(-50%) translateY(-50%);
   border-radius: 10px;
+  
 }
 
 .background-img {
