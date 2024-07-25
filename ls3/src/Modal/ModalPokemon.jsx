@@ -23,7 +23,7 @@ function ModalPokemon({ ...its }) {
         }
         setTimeout(() => {
             modalPokemon.classList.replace('close', 'hidden')
-        }, 800)
+        }, 600)
     }
 
 

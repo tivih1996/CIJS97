@@ -2,22 +2,26 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCount(prevCount => prevCount + 1);
-    }, 1000);
+		const handleScroll = () => {
+			const position = document.documentElement.scrollTop;
+			console.log("scrolling position: ", position);
+		}
+		document.addEventListener("scroll", handleScroll)
+		return () => {
+			document.removeEventListener("scroll", handleScroll)
+		}
+	})
 
-    // Cleanup khi component unmount
-    return () => clearInterval(interval);
-  }, []); // Chỉ chạy một lần khi component mount
+return <div>Hellolll
+  ll'
+  ;\
 
-  return (
-    <div>
-      Timer: {count}
-    </div>
-  )
+  đfsd
+  
+</div>
 }
 
 export default App;
