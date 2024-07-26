@@ -13,7 +13,7 @@ function Home() {
         <input type='text' ></input>
     </header>
     <main className='main-home'>
-    <Explore />
+    <Explore  />
     <NewRealease  />
     </main>
     </>

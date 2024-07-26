@@ -1,75 +1,66 @@
 h1 {
-width: 232px;
-height: 32px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 36px;
-line-height: 32px;
-color: #FFFFFF;
+    width: 232px;
+    height: 32px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 32px;
+    color: #FFFFFF;
 }
 
-.new-realease{
-margin: auto;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 24px;
-width: 1170px;
-height: 361.87px;
-/* Inside auto layout */
-flex: none;
-order: 4;
-flex-grow: 0;
+.new-realease {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 1170px;
+    height: 361.87px;
 }
 
-.list-movie{
+.list-movie {
     flex: none;
-    order: 4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+    width: 1170px;
+    height: 305.87px;
+
+}
+
+.item-move {
+    width: 170px;
+    height: 284.11px;
+    flex: none;
     flex-grow: 0;
-
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px;
-gap: 30px;
-
-width: 1170px;
-height: 305.87px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
 }
-.item-move{
-width: 170px;
-height: 284.11px;
-flex: none;
-flex-grow: 0;
+
+.img-movie {
+    width: 100%;
+    height: 100%;
 }
-.img-movie{
-width: 100%;
-height: 100%;
+
+.episode-movie {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 112.5%;
+    text-align: center;
+    color: #FFFFFF;
 }
-.episode-movie{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 112.5%;
-text-align: center;
-color: #FFFFFF;
-}
-.name-movie{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 18px;
-text-align: center;
-color: #FFFFFF;
+
+.name-movie {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
 }

@@ -1,0 +1,41 @@
+.explore{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    width: 1200px;
+    max-height: 100%;
+}
+.list-movie-scroll {
+    display: flex;
+    overflow: hidden;
+    width: 1170px;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+   
+}
+
+.item-move-scroll {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    background-color: lightcoral;
+    margin-right: 10px; 
+    display: inline-block;
+    border-radius: 10px;
+}
+.img-movie-explore{
+    display: block;
+    width: 100%;
+    height: 100%;
+   
+    }
+.content-explore{
+    width: 586px;
+    height: 161px;
+    position: relative;
+    top:-200px;
+}
