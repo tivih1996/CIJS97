@@ -12,8 +12,10 @@ function NewRealease() {
                     {dataMovie.map(item => (
                         <section id='movie' className='item-move'>
                             <img src={item.image} className='img-movie' />
-                            <p className='episode-movie'>{item.episode}</p>
+                            <div className='content-movie' >
+                            <p className='episode-movie'>Episode {item.episode}</p>
                             <p className='name-movie'>{item.movieName}</p>
+                            </div>
                         </section>
                     ))}
                 </div>

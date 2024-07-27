@@ -58,7 +58,7 @@
 }
 
 .content-explore {
-    background: linear-gradient(to right, #110f0fdb, #110f0f00);
+    background: linear-gradient(to right, #050505cd, #110f0f00);
     width: 1170px;
     height: 504px;
     position: relative;
@@ -70,7 +70,7 @@
 }
 
 .content-explore .name-movie {
-    margin: 230px 0px 0px 30px;
+    margin: 250px 0px 0px 30px ;
     width: 571px;
     height: 64px;
     font-family: 'Poppins';
@@ -81,17 +81,16 @@
     color: #FFFFFF;
     text-align: left;
 }
-
 .content-explore .description-movie {
-    margin: 0px 30px;
-    width: 700px;
-    height: 81px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 27px;
-    color: #FFFFFF;
-    text-align: left;
+    margin: 0px 30px ;
+width: 700px;
+height: 81px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 27px;
+color: #FFFFFF;
+text-align: left;
 
 }
