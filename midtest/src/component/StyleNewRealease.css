@@ -10,6 +10,7 @@ h1 {
 }
 
 .new-realease {
+    background-color: #192026;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -17,7 +18,6 @@ h1 {
     padding: 0px;
     gap: 24px;
     width: 1170px;
-    height: 361.87px;
 }
 
 .list-movie {
@@ -43,6 +43,7 @@ h1 {
 .img-movie {
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 .episode-movie {

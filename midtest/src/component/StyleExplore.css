@@ -1,41 +1,97 @@
-.explore{
+.explore {
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    width: 1200px;
+    padding: 20px;
+    width: 1170px;
     max-height: 100%;
 }
-.list-movie-scroll {
-    display: flex;
-    overflow: hidden;
-    width: 1170px;
-    height: 500px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-   
+
+.explore p {
+    /* What are you gonna watch today ? */
+
+    width: 387px;
+    height: 25px;
+    display: inline-block;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 112.5%;
+    color: #868686;
+    margin: 0px 0px 20px 0px;
+
 }
 
-.item-move-scroll {
+.slide-show-movie {
+    width: 1170px;
+    height: 500px;
+    overflow: hidden
+}
+
+.list-movie-scroll {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 10px;
+    transform: translateX();
+}
+
+.item-movie-scroll {
     flex: none;
     width: 100%;
     height: 100%;
     background-color: lightcoral;
-    margin-right: 10px; 
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 20px;
+
 }
-.img-movie-explore{
-    display: block;
+
+.img-movie-explore {
+
     width: 100%;
     height: 100%;
-   
-    }
-.content-explore{
-    width: 586px;
-    height: 161px;
+    border-radius: 20px;
+
+}
+
+.content-explore {
+    background: linear-gradient(to right, #110f0fdb, #110f0f00);
+    width: 1170px;
+    height: 504px;
     position: relative;
-    top:-200px;
+    top: -504px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+}
+
+.content-explore .name-movie {
+    margin: 230px 0px 0px 30px;
+    width: 571px;
+    height: 64px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 64px;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.content-explore .description-movie {
+    margin: 0px 30px;
+    width: 700px;
+    height: 81px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #FFFFFF;
+    text-align: left;
+
 }

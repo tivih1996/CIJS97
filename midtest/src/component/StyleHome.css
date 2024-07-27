@@ -1,7 +1,108 @@
-.main-home{
+.main-home {
     height: 100vh;
     background-color: #192026;
 }
-.header-home{
+
+.header-home {
     background-color: #192026;
+    max-width: 100vw;
+    height: 48px;
+    padding-top: 30px;
+
+}
+
+.navbar {
+    width: 1170px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: center;
+    margin: auto;
+
+
+}
+.anonime {
+/* Anonime */
+flex: none;
+width: 201.44px;
+height: 32px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 32px;
+letter-spacing: 0.07em;
+color: #FFFFFF;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.home{
+    /* Home */
+    flex: none;
+width: 63.16px;
+height: 32px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+letter-spacing: 0.07em;
+
+color: #868686;
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+/* List anime */
+.listanime {
+    flex: none;
+width: 112.16px;
+height: 32px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+letter-spacing: 0.07em;
+
+color: #868686;
+
+flex: none;
+order: 2;
+flex-grow: 0;
+
+}
+.input-name-movie{
+    /* Frame 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+width: 370px;
+height: 50px;
+background: #374151;
+border-radius: 37px;
+flex: none;
+order: 3;
+flex-grow: 0;
+border: none;
+
+}
+.input-name-movie::placeholder{
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 32px;
+letter-spacing: 0.07em;
+padding: 20px 20px;
+color: #868686;
+
 }
