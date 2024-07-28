@@ -4,7 +4,7 @@ import { dataMovie } from '../data/dataMovie'
 import './StyleExplore.css'
 
 function Explore({ itemMovieCurrent }) {
-  
+
   // hiệu ứng chuyển động slide show
   const [idxImg, setidxImg] = useState(0)
   const [data, setData] = useState(dataMovie)
@@ -12,21 +12,29 @@ function Explore({ itemMovieCurrent }) {
 
   useEffect(() => {
     setItem(itemMovieCurrent)
-    console.log(item)
   }, [itemMovieCurrent])
+
+
 
   console.log(idxImg)
   useEffect(() => {
-    var intervalid = setInterval(() => {
+    let intervalid = setInterval(() => {
       const listMovieScroll = document.querySelector('.list-movie-scroll')
       listMovieScroll.style.transform = `translateX(${1170 * -1 * idxImg}px)`
       setidxImg(previdxImg => (previdxImg + 1) % data.length)
     }, 4000)
-
     return () => clearInterval(intervalid)
   }, [idxImg])
 
-  
+  useEffect(() => {
+
+    setData(item)
+    setTimeout(() => {
+      setData(dataMovie)
+      setidxImg(0)
+
+    }, 4000)
+  }, [item])
 
 
 
