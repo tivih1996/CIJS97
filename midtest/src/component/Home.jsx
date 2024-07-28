@@ -1,6 +1,6 @@
 import React from 'react'
 import NewRealease from './NewRealease'
-import Explore from './Explore'
+
 import { Link } from 'react-router-dom'
 import './StyleHome.css'
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
         </div>
       </header>
       <main className='main-home'>
-        <Explore />
+        
         <NewRealease />
       </main>
     </>
