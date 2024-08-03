@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { dataMovie } from '../data/dataMovie'
 import './StyleExplore.css'
 
@@ -9,32 +9,28 @@ function Explore({ itemMovieCurrent }) {
   const [idxImg, setidxImg] = useState(0)
   const [data, setData] = useState(dataMovie)
   const [item, setItem] = useState([])
+  const intervalid = useRef(null)
 
-  useEffect(() => {
-    setItem(itemMovieCurrent)
-  }, [itemMovieCurrent])
-
+  
 
 
+  
   console.log(idxImg)
   useEffect(() => {
-    let intervalid = setInterval(() => {
+    intervalid.current = setInterval(() => {
       const listMovieScroll = document.querySelector('.list-movie-scroll')
       listMovieScroll.style.transform = `translateX(${1170 * -1 * idxImg}px)`
       setidxImg(previdxImg => (previdxImg + 1) % data.length)
-    }, 4000)
-    return () => clearInterval(intervalid)
+    }, 5000)
+       console.log(intervalid.current)
+    return () => {
+    clearInterval(intervalid.current)
+    }
   }, [idxImg])
 
-  useEffect(() => {
-
-    setData(item)
-    setTimeout(() => {
-      setData(dataMovie)
-      setidxImg(0)
-
-    }, 4000)
-  }, [item])
+  useEffect(()=>{
+    
+  })
 
 
 
@@ -47,7 +43,7 @@ function Explore({ itemMovieCurrent }) {
         <div className='slide-show-movie'>
           <div className='list-movie-scroll'>
             {data.map(item => (
-              <section className='item-movie-scroll'>
+              <section className='item-movie-scroll' key={item.id} >
                 <img src={item.poster} className='img-movie-explore' />
                 <div className='content-explore'>
                   <p className='name-movie'>{item.movieName}</p>
