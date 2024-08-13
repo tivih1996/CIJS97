@@ -12,9 +12,8 @@ import Col from 'react-bootstrap/Col';
 function Header() {
     return (
         <>
-            <Navbar bg="dark" variant="dark" expand="md" className="bg-body-tertiary">
+            <Navbar bg="dark" variant="dark" expand="md"  className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
                     <Form inline>
                         <Row>
                             <Col xs="auto">
@@ -28,9 +27,9 @@ function Header() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link href="#home">About</Nav.Link>
+                            <Nav.Link href="#features">Contact</Nav.Link>
+                            <Nav.Link href="#pricing">Premium</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
