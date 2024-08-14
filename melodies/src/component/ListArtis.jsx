@@ -1,46 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import { fecthAllUserArtis } from '../service/UserService';
 
 
 function ListArtis() {
-        useEffect(()=>{
-         getAllUserArtis()
-        },[])
+    const [listArtis, setListArtis] = useState([])
+    useEffect(() => {
+        getAllUserArtis()
+    }, [])
 
-        const getAllUserArtis = async () => {
-            let res = await fecthAllUserArtis();
-            console.log(res)
-           }
+    const getAllUserArtis = async () => {
+        let res = await fecthAllUserArtis();
+        if (res && res.data) {
+            setListArtis(res.data)
+        }
+        console.log(res)
+    }
     return (
         <>
             <Table striped bordered hover variant="dark">
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>STT</th>
+                        <th>Tên nghệ sĩ </th>
+                        <th>Email</th>
+                        <th>Số bài hát</th>
+                        <th>Số bài hát</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td colSpan={2}>Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {listArtis.map((item) => (
+                        <tr key={`${item.name}${item.id}`}>
+                            <td>{item.id}</td>
+                            <td>{item.name}</td>
+                            <td>{item.email}</td>
+                            <td>{item.songs}</td>
+                            <td>{item.albums}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </Table>
         </>
