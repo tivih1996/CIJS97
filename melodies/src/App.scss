@@ -1,16 +1,42 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
 
-  
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+  background-color: black;
+  /* Thay thế màu nền theo nhu cầu */
+  min-height: 100vh;
+  /* Đảm bảo chiều cao của phần tử gốc chiếm toàn bộ viewport */
+}
+
+.melodies {
+  background: linear-gradient(90.07deg, #EE10B0 -4.82%, rgba(14, 158, 239, 0.92) 127.01%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 750;
+  font-size: 30px;
+}
+.tiltle-sidebar{
+
+font-style: normal;
+font-weight: 500;
+font-size: 15px;
+line-height: 31px;
+color: #EE10B0;
+opacity: 0.6;
+margin-bottom: 20px;
+
+}
