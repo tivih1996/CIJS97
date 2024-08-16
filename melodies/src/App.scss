@@ -29,14 +29,30 @@ code {
   font-weight: 750;
   font-size: 30px;
 }
-.tiltle-sidebar{
 
-font-style: normal;
-font-weight: 500;
-font-size: 15px;
-line-height: 31px;
-color: #EE10B0;
-opacity: 0.6;
-margin-bottom: 20px;
+.tiltle-sidebar {
 
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 31px;
+  color: #EE10B0;
+  opacity: 0.6;
+  margin-bottom: 20px;
+
+}
+
+//home
+.poster-home {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  position: relative;
+  // left: 50vw;
+  // transform: translateX(-50%); 
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  border-radius: 50%;
+  background-color: #EE10B0;
 }

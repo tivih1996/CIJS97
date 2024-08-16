@@ -5,8 +5,8 @@ import PosterHome from './PosterHome'
 function Home() {
   return (
     <>
-    <Container>
-        <Container id='PosterHome'>
+    <Container className='p-0'>
+        <Container className='p-0'>
             <PosterHome/>
         </Container>
         <Container id='WeeklyTop'>
