@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/esm/Button';
 
 function Sidebar() {
   return (
-    <Nav defaultActiveKey="/home" className="flex-column"  >
+    <Nav defaultActiveKey="/home" className="flex-column"   >
       <Container className='mt-5' >
         <Container className='p-0' >
         <span className='melodies'>Melodies</span>

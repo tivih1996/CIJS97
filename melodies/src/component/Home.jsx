@@ -1,6 +1,8 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container'
 import PosterHome from './PosterHome'
+import WeeklyTop from './WeeklyTop'
+import Newrelease from './Newrelease'
 
 function Home() {
   return (
@@ -10,10 +12,10 @@ function Home() {
             <PosterHome/>
         </Container>
         <Container id='WeeklyTop'>
-
+            <WeeklyTop />
         </Container>
         <Container id='NewRelease'>
-
+            <Newrelease/>
         </Container>
         <Container id='Trending'>
 

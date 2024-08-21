@@ -14,8 +14,10 @@ function App() {
     <>
       <Container className='bg-black min-vh-100' >
         <Row className="d-flex h-100">
-          <Col xs={2} className="p-0" style={{ backgroundColor: '#0E1920', height: '100vh' }} >
-            <Sidebar  />
+          <Col xs={2} className="p-0" style={{ backgroundColor: '#0E1920'}} >
+            <div className='position-fixed'>
+            <Sidebar />
+            </div>
           </Col>
           <Col xs={10}  className="p-0" style={{backgroundColor:'#412C3A'}} >
             <Header />
