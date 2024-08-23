@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import '../../src/App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCirclePlus} from '@fortawesome/free-solid-svg-icons'
+import {faPlus} from '@fortawesome/free-solid-svg-icons'
 
 function WeeklyTop() {
   const data = [{
@@ -48,7 +48,9 @@ function WeeklyTop() {
           </Card>
         ))}
         <div className='d-flex flex-column justify-content-center'>
-        <FontAwesomeIcon icon={faCirclePlus} style={{width: '62px', height: '63px', backgroundColor:'white',border:'none', borderRadius:'50px', cursor:'pointer'}} />
+        <span className='d-flex justify-content-center align-items-center' style={{width:'62px', height: '63px',backgroundColor:'#1F1F1F',borderRadius:'50%', cursor:'pointer'}}>
+              <FontAwesomeIcon icon={faPlus} size="xl" style={{ color:'white', cursor:'pointer'}} />
+              </span>
         <span style={{color:'white',width: '93px', height: '31px', fontSize:'20px',fontWeight:'600'}}>View All</span>
         </div>
       </section>
