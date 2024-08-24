@@ -56,8 +56,8 @@ function Trending() {
 
         <>
             <h1 className='mt-5 mb-4' style={{ color: 'white', fontSize: '32px' }} >Trending <span style={{ color: 'rgba(238, 16, 176, 1)' }}>Songs</span> </h1>
-            <Table  style={{color:'white', borderSpacing:'0px'}}  >
-                <thead className='text-center' style={{color:'white'}} >
+            <Table  style={{color:'white', borderColor:'#412C3A', }}  >
+                <thead className='text-center' style={{color:'white', borderColor:'#412C3A'}} >
                     <tr >
                         <th></th>
                         <th></th>
@@ -68,22 +68,24 @@ function Trending() {
                         <th>Time</th>
                     </tr>
                 </thead>
-                <tbody className='border-0 align-middle text-center'>
+                <tbody className=' align-middle text-center'  style={{borderColor:'#412C3a'}} >
                     {data.map((item, idx) => (
-                        <tr key={`${item.nameSong}`}>
-                            <td>{`#${idx + 1}`}</td>
-                            <td>
-                            <Image src={item.imgLink} rounded />
+                      
+                        <tr key={`${item.nameSong}`} style={{backgroundColor:'rgba(30, 30, 30, 1)', borderBottomWidth:'30px',margin:'10px'}}>
+                            <td   style={{backgroundColor:'#412C3A'}}>{`#${idx + 1}`}</td>
+                            <td style={{padding:'0'}} >
+                            <Image src={item.imgLink} style={{width:'100%',height:'100%',borderRadius:'10px'}} />
                             </td>
-                            <td className='text-start'>
+                            <td  style={{textAlign:'start'}}>
                                 <h6>{item.nameSong}</h6>
                                 <span>{item.artis}</span>
                             </td>
-                            <td>{item.relaseday}</td>
-                            <td>{item.album}</td>
-                            <td><FontAwesomeIcon icon={faHeart} /></td>
-                            <td>{item.time}</td>
+                            <td >{item.relaseday}</td>
+                            <td  >{item.album}</td>
+                            <td  ><FontAwesomeIcon icon={faHeart} style={{color:'rgba(238, 16, 176, 1)'}} /></td>
+                            <td  >{item.time}</td>
                         </tr>
+                      
                     ))}
                 </tbody>
             </Table>
